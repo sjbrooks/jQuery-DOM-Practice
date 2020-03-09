@@ -91,7 +91,10 @@
   $('#title').css("font-size", `${randomSize}px`);
 
   // #5
-  $('ol').append($('<li>').text('Cranky cat is great!!!'));
+  // Alternate way of creating elements with objects
+  $('ol').append($('<li>', {
+    text: 'Cranky cat is great!!!'
+  }))
 
   // #6
   $('aside').html($('<p>').text('Cranky cat is still great...'));
@@ -106,7 +109,12 @@
   //   $('body').css('background-color', `rgb(${r}, ${g}, ${b})`);
   // });
 
-  $('.form-control').on('change', () => {
+  $('.form-control').on('change blur', () => {
+
+    // Example of destructuring
+    // const [r, b, g] = $('input');
+    // const $r = r.val();
+
     const r = $('.col-sm-4:first-child input').val();
     const b = $('.col-sm-4:nth-child(2) input').val();
     const g = $('.col-sm-4:last-child input').val();
