@@ -1,4 +1,4 @@
-$('button.submit').on("click", (evt) => {
+$('form').on("submit", (evt) => {
   evt.preventDefault();
   let $title = $('input:first-child').val();
   let $rating = $('input:nth-child(2)').val();
@@ -28,3 +28,10 @@ $('button.submit').on("click", (evt) => {
 // $(function sort () {
 //   $('#sort-alph').on("click", () =>)
 // });
+
+
+
+
+// Class for movies
+
+// on submit
