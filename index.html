@@ -74,7 +74,52 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
-  // Add your code here!
+
+  // #1
+  $(function() {
+    console.log("Let’s get ready to party with jQuery!");
+  });
+
+  // #2
+  $('article img').addClass('image-center');
+
+  // #3
+  $('article p:last-child').remove();
+
+  // #4
+  const randomSize = Math.floor(Math.random() * 101);
+  $('#title').css("font-size", `${randomSize}px`);
+
+  // #5
+  $('ol').append($('<li>').text('Cranky cat is great!!!'));
+
+  // #6
+  $('aside').html($('<p>').text('Cranky cat is still great...'));
+
+  // #7
+  // $('.form-control').on('change', () => {
+  //   const colors = $('input');
+  //   const r = colors.eq(0).val();
+  //   const b = colors.eq(1).val();
+  //   const g = colors.eq(2).val();
+
+  //   $('body').css('background-color', `rgb(${r}, ${g}, ${b})`);
+  // });
+
+  $('.form-control').on('change', () => {
+    const r = $('.col-sm-4:first-child input').val();
+    const b = $('.col-sm-4:nth-child(2) input').val();
+    const g = $('.col-sm-4:last-child input').val();
+
+    $('body').css('background-color', `rgb(${r}, ${g}, ${b})`);
+  });
+
+  // #8
+  $('img').on('click', (e) => {
+    e.target.remove();
+  });
+
+
 </script>
 </body>
 
