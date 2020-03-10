@@ -24,7 +24,7 @@ $('.sort-alph').on("click", () => {
   console.log("successful click;");
   console.log(movieList);
   movieList.sort((a,b) => {
-    (a.title > b.title ? 1 : -1);
+    return (a.title > b.title ? 1 : -1);
     console.log(movieList);
   });
   redrawDOM();
